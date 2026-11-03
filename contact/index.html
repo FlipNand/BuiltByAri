@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — BuiltByAri</title>
+    <meta
+      name="description"
+      content="Tell BuiltByAri about your business. Call or text 416-797-4821, email aristeinberg@icloud.com, or send the form — replies within one business day."
+    />
+    <link rel="canonical" href="https://web.asteinberg.me/contact/" />
+    <meta name="theme-color" content="#f4f2ed" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BuiltByAri" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:title" content="Contact — BuiltByAri" />
+    <meta
+      property="og:description"
+      content="Tell us about your business. Replies within one business day, from the person doing the work."
+    />
+    <meta property="og:url" content="https://web.asteinberg.me/contact/" />
+    <meta property="og:image" content="https://web.asteinberg.me/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+    <script type="module" src="/src/js/main.ts"></script>
+  </head>
+
+  <body data-page="contact">
+    <!-- @include header.html -->
+
+    <main id="main" tabindex="-1">
+      <section class="page-head">
+        <div class="container">
+          <p class="eyebrow">Contact</p>
+          <h1 class="page-head__title">Tell us what you&rsquo;re building.</h1>
+          <p class="page-head__lead">
+            A few sentences about your business is plenty. We reply within one business day, from
+            the person who will actually build the site.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="contact-form-title">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-grid__details">
+              <h2 class="eyebrow" id="contact-form-title">Direct lines</h2>
+
+              <ul class="contact-list" role="list">
+                <li class="contact-list__item">
+                  <span class="contact-list__label">Call or text</span>
+                  <span class="contact-list__value">
+                    <a class="contact-list__link" href="tel:+14167974821">416&ndash;797&ndash;4821</a>
+                  </span>
+                </li>
+                <li class="contact-list__item">
+                  <span class="contact-list__label">Email</span>
+                  <span class="contact-list__value">
+                    <a class="contact-list__link" href="mailto:aristeinberg@icloud.com">
+                      aristeinberg@icloud.com
+                    </a>
+                  </span>
+                </li>
+                <li class="contact-list__item">
+                  <span class="contact-list__label">Service area</span>
+                  <span class="contact-list__value">Toronto &amp; the GTA</span>
+                </li>
+                <li class="contact-list__item">
+                  <span class="contact-list__label">Reply time</span>
+                  <span class="contact-list__value">Within one business day</span>
+                </li>
+              </ul>
+
+              <p class="section__footnote">
+                Not sure what you need yet? Send the form anyway. The first call is 20 minutes and
+                there is no pitch deck.
+              </p>
+            </div>
+
+            <div class="contact-grid__form">
+              <h2 class="visually-hidden">Project inquiry form</h2>
+
+              <form class="form" data-contact-form data-endpoint="/api/contact" novalidate>
+                <div class="form__honeypot" aria-hidden="true">
+                  <label for="botcheck">Leave this field empty</label>
+                  <input id="botcheck" name="botcheck" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <div class="form__row">
+                  <div class="field">
+                    <label class="field__label" for="name">Name</label>
+                    <input
+                      class="field__control"
+                      id="name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      placeholder="First and last"
+                      required
+                      aria-describedby="name-error"
+                    />
+                    <p class="field__error" id="name-error" data-error-for="name" hidden>
+                      <svg class="field__error-icon" aria-hidden="true">
+                        <use href="/icons.svg#alert-circle" />
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="email">Email</label>
+                    <input
+                      class="field__control"
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      placeholder="you@business.ca"
+                      required
+                      aria-describedby="email-error"
+                    />
+                    <p class="field__error" id="email-error" data-error-for="email" hidden>
+                      <svg class="field__error-icon" aria-hidden="true">
+                        <use href="/icons.svg#alert-circle" />
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="field">
+                    <label class="field__label" for="business">
+                      Business name <span class="field__optional">(optional)</span>
+                    </label>
+                    <input
+                      class="field__control"
+                      id="business"
+                      name="business"
+                      type="text"
+                      autocomplete="organization"
+                      placeholder="The shop, not the website"
+                      aria-describedby="business-error"
+                    />
+                    <p class="field__error" id="business-error" data-error-for="business" hidden>
+                      <svg class="field__error-icon" aria-hidden="true">
+                        <use href="/icons.svg#alert-circle" />
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="phone">
+                      Phone <span class="field__optional">(optional)</span>
+                    </label>
+                    <input
+                      class="field__control"
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      placeholder="416-555-0123"
+                      aria-describedby="phone-hint phone-error"
+                    />
+                    <p class="field__hint" id="phone-hint">Only if you would rather talk than type.</p>
+                    <p class="field__error" id="phone-error" data-error-for="phone" hidden>
+                      <svg class="field__error-icon" aria-hidden="true">
+                        <use href="/icons.svg#alert-circle" />
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="project">What do you need?</label>
+                  <select class="field__control" id="project" name="project" aria-describedby="project-error">
+                    <option value="">Choose one</option>
+                    <option value="New website">A new website</option>
+                    <option value="Redesign">A redesign of an existing site</option>
+                    <option value="Monthly care plan">Hosting and monthly care</option>
+                    <option value="Something else">Something else</option>
+                  </select>
+                  <p class="field__error" id="project-error" data-error-for="project" hidden>
+                    <svg class="field__error-icon" aria-hidden="true">
+                      <use href="/icons.svg#alert-circle" />
+                    </svg>
+                    <span data-error-text></span>
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="message">What are you working on?</label>
+                  <textarea
+                    class="field__control"
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                    placeholder="The business, who it serves, and what you want the site to do."
+                    aria-describedby="message-hint message-error"
+                  ></textarea>
+                  <p class="field__hint" id="message-hint">
+                    A short paragraph is enough. 20 characters minimum, 2,000 maximum.
+                  </p>
+                  <p class="field__error" id="message-error" data-error-for="message" hidden>
+                    <svg class="field__error-icon" aria-hidden="true">
+                      <use href="/icons.svg#alert-circle" />
+                    </svg>
+                    <span data-error-text></span>
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label class="check" for="consent">
+                    <input
+                      class="check__input"
+                      id="consent"
+                      name="consent"
+                      type="checkbox"
+                      required
+                      aria-describedby="consent-error"
+                    />
+                    <span class="check__text">
+                      I agree to BuiltByAri storing this message and replying by email. Details in
+                      the <a href="/privacy/">privacy policy</a>.
+                    </span>
+                  </label>
+                  <p class="field__error" id="consent-error" data-error-for="consent" hidden>
+                    <svg class="field__error-icon" aria-hidden="true">
+                      <use href="/icons.svg#alert-circle" />
+                    </svg>
+                    <span data-error-text></span>
+                  </p>
+                </div>
+
+                <div
+                  class="form-status"
+                  role="status"
+                  tabindex="-1"
+                  data-form-status
+                  hidden
+                >
+                  <svg class="form-status__icon" aria-hidden="true">
+                    <use href="/icons.svg#check-circle" />
+                  </svg>
+                  <div class="form-status__body">
+                    <p class="form-status__title" data-status-title></p>
+                    <p class="form-status__text" data-status-text></p>
+                  </div>
+                </div>
+
+                <div class="form__actions">
+                  <button class="btn btn--primary" type="submit">
+                    <span data-submit-label>Send message</span>
+                    <svg class="icon btn__icon btn__icon--arrow" aria-hidden="true">
+                      <use href="/icons.svg#arrow-right" />
+                    </svg>
+                  </button>
+                  <p class="form__meta">
+                    Sent straight to our inbox. No newsletter, no sharing, replies within one
+                    business day.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer.html -->
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found — BuiltByAri</title>
+    <meta name="description" content="That page does not exist. Find services, pricing, or get in touch with BuiltByAri." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#f4f2ed" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+    <script type="module" src="/src/js/main.ts"></script>
+  </head>
+
+  <body data-page="not-found">
+    <!-- @include header.html -->
+
+    <main id="main" tabindex="-1">
+      <section class="error-page" aria-labelledby="error-title">
+        <div class="container">
+          <p class="eyebrow">Error 404</p>
+          <p class="error-page__code" aria-hidden="true">404</p>
+          <h1 class="error-page__title" id="error-title">This page has moved on.</h1>
+          <p class="error-page__body">
+            The link is broken, the page was renamed, or it never existed. Nothing is wrong on your
+            end. Here is everywhere worth going instead.
+          </p>
+
+          <ul class="error-page__links" role="list">
+            <li><a class="btn btn--quiet" href="/">Home</a></li>
+            <li><a class="btn btn--quiet" href="/services/">Services &amp; pricing</a></li>
+            <li><a class="btn btn--quiet" href="/about/">About the studio</a></li>
+            <li><a class="btn btn--quiet" href="/contact/">Contact</a></li>
+          </ul>
+
+          <p class="error-page__body">
+            Still stuck? Call or text
+            <a href="tel:+14167974821">416&ndash;797&ndash;4821</a> or email
+            <a href="mailto:aristeinberg@icloud.com">aristeinberg@icloud.com</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer.html -->
+  </body>
+</html>

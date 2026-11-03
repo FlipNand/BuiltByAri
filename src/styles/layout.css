@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Layout — container, section rhythm, editorial section headers.
+   Everything aligns to the 12-column grid and the 4px space scale.
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max) + var(--container-pad) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   A hairline rule on top of every section keeps the page reading like a
+   printed sheet — the studio flyer's signature.
+   -------------------------------------------------------------------------- */
+.section {
+  padding-block: var(--section-pad-block);
+  border-top: var(--border-hairline);
+}
+
+.section--tight {
+  padding-block: var(--section-pad-block-sm);
+}
+
+.section--flush {
+  border-top: 0;
+}
+
+.section--ink {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  border-top-color: var(--color-ink);
+}
+
+.section--paper-sunken {
+  background-color: var(--color-paper-sunken);
+}
+
+/* --------------------------------------------------------------------------
+   Section header: label / headline / intro on the same 12-column grid.
+   Below 960px the three parts stack in reading order.
+   -------------------------------------------------------------------------- */
+.section__head {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+.section__head .eyebrow {
+  grid-column: 1 / span 3;
+  padding-top: 0.75rem;
+}
+
+.section__title {
+  grid-column: 4 / span 9;
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  max-width: 20ch;
+}
+
+.section__intro {
+  grid-column: 4 / span 6;
+  margin-top: var(--space-lg);
+  color: var(--color-ink-soft);
+  font-size: var(--text-lead);
+  line-height: var(--leading-body);
+  max-width: var(--measure);
+}
+
+.section__head--wide .section__title {
+  max-width: 26ch;
+}
+
+@media (max-width: 959px) {
+  .section__head .eyebrow,
+  .section__title,
+  .section__intro {
+    grid-column: 1 / -1;
+  }
+
+  .section__head .eyebrow {
+    padding-top: 0;
+    margin-bottom: var(--space-md);
+  }
+
+  .section__intro {
+    margin-top: var(--space-md);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Page header (interior pages)
+   -------------------------------------------------------------------------- */
+.page-head {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+  border-bottom: var(--border-hairline);
+}
+
+.page-head__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display-lg);
+  max-width: 22ch;
+  margin-top: var(--space-lg);
+}
+
+.page-head__lead {
+  margin-top: var(--space-lg);
+  max-width: var(--measure);
+  color: var(--color-ink-soft);
+  font-size: var(--text-lead);
+}
+
+/* --------------------------------------------------------------------------
+   Generic rules and dividers
+   -------------------------------------------------------------------------- */
+.rule {
+  height: var(--border-width);
+  border: 0;
+  background-color: var(--color-line);
+}
+
+.rule--strong {
+  background-color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Two-column editorial split: sticky aside + content column.
+   -------------------------------------------------------------------------- */
+.split {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+.split__aside {
+  grid-column: 1 / span 4;
+  position: sticky;
+  top: 7rem;
+}
+
+.split__main {
+  grid-column: 5 / span 8;
+}
+
+@media (max-width: 959px) {
+  .split__aside,
+  .split__main {
+    grid-column: 1 / -1;
+    position: static;
+  }
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Utilities — the only global helpers. Everything else is a component.
+   ========================================================================== */
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip-link target: focusable programmatically, no visible outline. */
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+.stack > * + * {
+  margin-top: var(--space-md);
+}
+
+.text-ink-soft {
+  color: var(--color-ink-soft);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .hide-sm {
+    display: none;
+  }
+}

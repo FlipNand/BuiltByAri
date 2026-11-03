@@ -1,0 +1,43 @@
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" data-site-header>
+  <div class="container site-header__inner">
+    <a class="wordmark" href="/" data-nav="home">Built by Ari</a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <!-- @include nav-desktop.html -->
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="site-header__phone" href="tel:+14167974821">416&ndash;797&ndash;4821</a>
+      <a class="btn btn--primary btn--sm" href="/contact/">
+        Start a project
+        <svg class="icon btn__icon btn__icon--arrow" aria-hidden="true">
+          <use href="/icons.svg#arrow-right" />
+        </svg>
+      </a>
+    </div>
+
+    <details class="site-header__menu" data-mobile-nav>
+      <summary class="menu-toggle">
+        <span class="menu-toggle__label menu-toggle__label--open">Menu</span>
+        <span class="menu-toggle__label menu-toggle__label--close">Close</span>
+        <svg class="icon menu-toggle__icon menu-toggle__icon--open" aria-hidden="true">
+          <use href="/icons.svg#menu" />
+        </svg>
+        <svg class="icon menu-toggle__icon menu-toggle__icon--close" aria-hidden="true">
+          <use href="/icons.svg#close" />
+        </svg>
+      </summary>
+
+      <nav class="mobile-nav" aria-label="Mobile">
+        <!-- @include nav-mobile.html -->
+        <div class="mobile-nav__footer">
+          <a class="contact-list__link" href="tel:+14167974821">416&ndash;797&ndash;4821</a>
+          <a class="contact-list__link" href="mailto:aristeinberg@icloud.com">aristeinberg@icloud.com</a>
+          <span class="text-ink-soft">Toronto &amp; the GTA</span>
+        </div>
+      </nav>
+    </details>
+  </div>
+</header>
